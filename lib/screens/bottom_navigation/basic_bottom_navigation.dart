@@ -31,7 +31,7 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
     return Scaffold(
       body: Center(
         child: Text(
-          widget.itemsNav[currentIndex].title,
+          "TEST",
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
