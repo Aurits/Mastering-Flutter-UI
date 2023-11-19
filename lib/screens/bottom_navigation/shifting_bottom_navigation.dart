@@ -4,10 +4,26 @@ import 'package:flutter_ui/model/bottom_nav.dart';
 class ShiftingBottomNavigation extends StatefulWidget {
   ShiftingBottomNavigation();
   final List<BottomNav> itemsNav = <BottomNav>[
-    BottomNav('Movie', Icons.store, null),
-    BottomNav('Music', Icons.business, null),
-    BottomNav('Books', Icons.shopping_cart, null),
-    BottomNav('Newsstand', Icons.account_circle, null),
+    BottomNav(
+      'Movie',
+      Icons.ondemand_video,
+      Colors.blueGrey[700],
+    ),
+    BottomNav(
+      'Music',
+      Icons.music_note,
+      Colors.pink[800],
+    ),
+    BottomNav(
+      'Books',
+      Icons.book,
+      Colors.grey[700],
+    ),
+    BottomNav(
+      'Newsstand',
+      Icons.chrome_reader_mode,
+      Colors.teal[800],
+    ),
   ];
 
   @override
