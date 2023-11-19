@@ -13,6 +13,7 @@ class MenuRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: Text(
           "FLUTTER UI COURSE",
           style: TextStyle(
