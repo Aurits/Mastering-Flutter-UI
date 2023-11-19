@@ -14,6 +14,15 @@ class BasicBottomNavigation extends StatefulWidget {
 }
 
 class _BasicBottomNavigationState extends State<BasicBottomNavigation> {
+  int currentIndex = 0;
+  late BuildContext ctx;
+
+  void onBackPress() {
+    if (Navigator.of(ctx).canPop()) {
+      Navigator.of(ctx).pop();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold();
