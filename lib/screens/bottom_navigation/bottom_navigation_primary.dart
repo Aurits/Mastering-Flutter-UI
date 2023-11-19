@@ -80,7 +80,17 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
                           color: Colors.teal[600],
                         ),
                       ),
-                    )
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                    Container(
+                      child: Tab(
+                        icon: Icon(
+                          Icons.local_offer,
+                          color: Colors.teal[600],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
                   ],
                 ),
               ),
