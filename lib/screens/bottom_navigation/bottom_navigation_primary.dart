@@ -1,35 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/my_colors.dart';
-import 'package:flutter_ui/model/bottom_nav.dart';
 
 class PrimaryBottomNavigation extends StatefulWidget {
   PrimaryBottomNavigation();
-  final List<BottomNav> itemsNav = <BottomNav>[
-    BottomNav('Home', Icons.store, null),
-    BottomNav('Business', Icons.business, null),
-    BottomNav('Shop', Icons.shopping_cart, null),
-    BottomNav('Profile', Icons.account_circle, null),
-  ];
 
   @override
   State<PrimaryBottomNavigation> createState() =>
-      _PrimaryBottomNavigationState();
+      new _PrimaryBottomNavigationState();
 }
 
 class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
-    with TickerProviderStateMixin<PrimaryBottomNavigation> {
-  int currentIndex = 0;
-  late BuildContext ctx;
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
 
-  void onBackPress() {
-    if (Navigator.of(ctx).canPop()) {
-      Navigator.of(ctx).pop();
-    }
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+    _tabController!.addListener(() {});
+  }
+
+  @override
+  void dispose() {
+    _tabController!.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    ctx = context;
     return Scaffold(
       backgroundColor: MyColors.grey_5,
       //floating
@@ -40,6 +38,30 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
             Expanded(
               child: Text(
                 "Hello",
+              ),
+            ),
+            Card(
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              margin: EdgeInsets.all(0),
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 4,
+                ),
+                child: TabBar(
+                  indicatorColor: Colors.transparent,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicatorWeight: 1,
+                  tabs: [
+                    Container(
+                      child: Text(""),
+                    )
+                  ],
+                ),
               ),
             ),
           ],
