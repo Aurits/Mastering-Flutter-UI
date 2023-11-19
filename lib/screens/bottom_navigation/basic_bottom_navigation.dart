@@ -32,11 +32,11 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
       backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue,
-        onTap: (int index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
+        // onTap: (int index) {
+        //   setState(() {
+        //     currentIndex = index;
+        //   });
+        // },
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
