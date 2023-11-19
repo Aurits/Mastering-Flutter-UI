@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/model/bottom_nav.dart';
 
 class BasicBottomNavigation extends StatefulWidget {
-  const BasicBottomNavigation({Key? key}) : super(key: key);
+  BasicBottomNavigation({Key? key}) : super(key: key);
+  final List<BottomNav> itemsNav = <BottomNav>[
+    BottomNav('Home', Icons.store, null),
+    BottomNav('Business', Icons.business, null),
+    BottomNav('Shop', Icons.shopping_cart, null),
+    BottomNav('Profile', Icons.account_circle, null),
+  ];
 
   @override
   State<BasicBottomNavigation> createState() => _BasicBottomNavigationState();
@@ -10,12 +16,6 @@ class BasicBottomNavigation extends StatefulWidget {
 
 class _BasicBottomNavigationState extends State<BasicBottomNavigation>
     with TickerProviderStateMixin<BasicBottomNavigation> {
-  final List<BottomNav> itemsNav = <BottomNav>[
-    BottomNav('Home', Icons.store, null),
-    BottomNav('Business', Icons.business, null),
-    BottomNav('Shop', Icons.shopping_cart, null),
-    BottomNav('Profile', Icons.account_circle, null),
-  ];
   int currentIndex = 0;
   late BuildContext ctx;
 
@@ -40,7 +40,7 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
-        items: itemsNav.map(
+        items: widget.itemsNav.map(
           (BottomNav d) {
             return BottomNavigationBarItem(
               icon: Icon(d.icon),
