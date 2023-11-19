@@ -5,7 +5,7 @@ class DarkBottomNavigation extends StatefulWidget {
   DarkBottomNavigation();
   final List<BottomNav> itemsNav = <BottomNav>[
     BottomNav('Home', Icons.store, null),
-    BottomNav('Business', Icons.business, null),
+    // BottomNav('Business', Icons.business, null),
     BottomNav('Shop', Icons.shopping_cart, null),
     BottomNav('Profile', Icons.account_circle, null),
   ];
@@ -46,8 +46,8 @@ class _DarkBottomNavigationState extends State<DarkBottomNavigation>
             currentIndex = index;
           });
         },
-        selectedItemColor: Colors.blue[400],
-        unselectedItemColor: Colors.blue[700],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
         items: widget.itemsNav.map(
           (BottomNav d) {
