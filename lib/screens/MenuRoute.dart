@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/bottom_navigation/basic_bottom_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/shifting_bottom_navigation.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -36,6 +37,15 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => BasicBottomNavigation(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Shifting Bottom Navigatin"),
+            onTap: () {
+              Get.to(
+                () => ShiftingBottomNavigation(),
               );
             },
           ),
