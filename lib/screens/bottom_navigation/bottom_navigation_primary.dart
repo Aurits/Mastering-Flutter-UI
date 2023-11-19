@@ -35,7 +35,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
         margin: EdgeInsets.all(10),
         child: FloatingActionButton(
           heroTag: "fab1",
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.teal[500],
           onPressed: () {
             print("Pressed");
           },
