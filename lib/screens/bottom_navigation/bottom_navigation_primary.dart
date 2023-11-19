@@ -57,7 +57,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
               ),
             ),
             Card(
-              elevation: 0,
+              elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(0),
               ),
@@ -74,7 +74,12 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
                   indicatorWeight: 1,
                   tabs: [
                     Container(
-                      child: Text(""),
+                      child: Tab(
+                        icon: Icon(
+                          Icons.apps,
+                          color: Colors.teal[600],
+                        ),
+                      ),
                     )
                   ],
                 ),
