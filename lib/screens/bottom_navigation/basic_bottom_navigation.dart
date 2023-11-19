@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/model/bottom_nav.dart';
 
 class BasicBottomNavigation extends StatefulWidget {
-  const BasicBottomNavigation();
+  final List<BottomNav> items = <BottomNav>[
+    BottomNav('Home', Icons.store, null),
+    BottomNav('Business', Icons.business, null),
+    BottomNav('Profile', Icons.account_circle, null),
+  ];
+  BasicBottomNavigation();
 
   @override
   State<BasicBottomNavigation> createState() => _BasicBottomNavigationState();
