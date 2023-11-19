@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/screens/bottom_navigation/basic_bottom_navigation.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -28,6 +29,15 @@ class MenuRoute extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.view_column),
             title: Text("Bottom Navigatin"),
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Basic Bottom Navigatin"),
+            onTap: () {
+              Get.to(
+                () => BasicBottomNavigation(),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.water_drop),
