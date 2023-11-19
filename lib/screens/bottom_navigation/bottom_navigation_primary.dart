@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/model/bottom_nav.dart';
 
 class PrimaryBottomNavigation extends StatefulWidget {
@@ -30,34 +31,19 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
   Widget build(BuildContext context) {
     ctx = context;
     return Scaffold(
-      body: Center(
-        child: Text(
-          "TEST",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
+      backgroundColor: MyColors.grey_5,
+      //floating
+
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Text(
+                "Hello",
+              ),
+            ),
+          ],
         ),
-      ),
-      backgroundColor: Colors.grey[200],
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
-        onTap: (int index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
-        selectedItemColor: Colors.blue[400],
-        unselectedItemColor: Colors.blue[700],
-        currentIndex: currentIndex,
-        items: widget.itemsNav.map(
-          (BottomNav d) {
-            return BottomNavigationBarItem(
-              icon: Icon(d.icon),
-              label: d.title,
-            );
-          },
-        ).toList(),
       ),
     );
   }
