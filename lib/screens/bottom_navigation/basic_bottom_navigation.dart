@@ -27,7 +27,9 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
 
   @override
   Widget build(BuildContext context) {
+    ctx = context;
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue[700],
         onTap: (int index) {
