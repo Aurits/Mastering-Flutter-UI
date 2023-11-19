@@ -5,7 +5,7 @@ class DarkBottomNavigation extends StatefulWidget {
   DarkBottomNavigation();
   final List<BottomNav> itemsNav = <BottomNav>[
     BottomNav('Home', Icons.store, null),
-    // BottomNav('Business', Icons.business, null),
+    BottomNav('Business', Icons.business, null),
     BottomNav('Shop', Icons.shopping_cart, null),
     BottomNav('Profile', Icons.account_circle, null),
   ];
