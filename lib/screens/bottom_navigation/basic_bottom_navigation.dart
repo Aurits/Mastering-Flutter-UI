@@ -46,8 +46,8 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
             currentIndex = index;
           });
         },
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey[400],
+        selectedItemColor: Colors.blue[400],
+        unselectedItemColor: Colors.blue[700],
         currentIndex: currentIndex,
         items: widget.itemsNav.map(
           (BottomNav d) {
