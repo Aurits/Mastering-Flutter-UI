@@ -8,7 +8,8 @@ class BasicBottomNavigation extends StatefulWidget {
   State<BasicBottomNavigation> createState() => _BasicBottomNavigationState();
 }
 
-class _BasicBottomNavigationState extends State<BasicBottomNavigation> {
+class _BasicBottomNavigationState extends State<BasicBottomNavigation>
+    with TickerProviderStateMixin<BasicBottomNavigation> {
   final List<BottomNav> itemsNav = <BottomNav>[
     BottomNav('Home', Icons.store, null),
     BottomNav('Business', Icons.business, null),
