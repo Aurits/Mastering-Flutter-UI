@@ -35,7 +35,7 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation> {
           });
         },
         selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.blue[400],
+        unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
         items: itemsNav.map(
           (BottomNav d) {
