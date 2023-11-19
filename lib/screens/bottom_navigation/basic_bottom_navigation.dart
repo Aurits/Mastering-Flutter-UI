@@ -29,14 +29,23 @@ class _BasicBottomNavigationState extends State<BasicBottomNavigation>
   Widget build(BuildContext context) {
     ctx = context;
     return Scaffold(
+      body: Center(
+        child: Text(
+          widget.itemsNav[currentIndex].title,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.blue,
-        // onTap: (int index) {
-        //   setState(() {
-        //     currentIndex = index;
-        //   });
-        // },
+        onTap: (int index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.grey[400],
         currentIndex: currentIndex,
