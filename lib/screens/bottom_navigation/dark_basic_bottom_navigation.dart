@@ -29,18 +29,18 @@ class _DarkBottomNavigationState extends State<DarkBottomNavigation>
   Widget build(BuildContext context) {
     ctx = context;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Text(
           "TEST",
           style: TextStyle(
+            color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
-      backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
         onTap: (int index) {
           setState(() {
             currentIndex = index;
@@ -52,6 +52,7 @@ class _DarkBottomNavigationState extends State<DarkBottomNavigation>
         items: widget.itemsNav.map(
           (BottomNav d) {
             return BottomNavigationBarItem(
+              backgroundColor: Colors.grey[900],
               icon: Icon(d.icon),
               label: d.title,
             );
