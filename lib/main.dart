@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/MenuRoute.dart';
+import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-
 import 'data/my_colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(GetMaterialApp(
+  runApp(
+    GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primaryColor: MyColors.primary,
@@ -17,5 +18,8 @@ void main() {
       home: MenuRoute(),
       routes: <String, WidgetBuilder>{
         '/MenuRoute': (BuildContext context) => new MenuRoute(),
-      }));
+        '/Instagram': (BuildContext context) => new SplashInstagram(),
+      },
+    ),
+  );
 }
