@@ -25,6 +25,10 @@ class MenuRoute extends StatelessWidget {
       body: ListView(
         children: [
           ListTile(
+            leading: Icon(Icons.view_column),
+            title: Text("Bottom Navigatin"),
+          ),
+          ListTile(
             leading: Icon(Icons.water_drop),
             title: Text("Splash Screen"),
           ),
