@@ -69,6 +69,7 @@ class _ShiftingBottomNavigationState extends State<ShiftingBottomNavigation>
         items: widget.itemsNav.map(
           (BottomNav d) {
             return BottomNavigationBarItem(
+              backgroundColor: d.color,
               icon: Icon(d.icon),
               label: d.title,
             );
