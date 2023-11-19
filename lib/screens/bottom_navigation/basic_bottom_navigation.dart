@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/model/bottom_nav.dart';
 
 class BasicBottomNavigation extends StatefulWidget {
-  BasicBottomNavigation({Key? key}) : super(key: key);
+  BasicBottomNavigation();
   final List<BottomNav> itemsNav = <BottomNav>[
     BottomNav('Home', Icons.store, null),
     BottomNav('Business', Icons.business, null),
