@@ -31,6 +31,22 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
     return Scaffold(
       backgroundColor: MyColors.grey_5,
       //floating
+      floatingActionButton: Container(
+        margin: EdgeInsets.all(10),
+        child: FloatingActionButton(
+          heroTag: "fab1",
+          backgroundColor: Colors.white,
+          onPressed: () {
+            print("Pressed");
+          },
+          elevation: 2,
+          child: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
       body: Container(
         child: Column(
