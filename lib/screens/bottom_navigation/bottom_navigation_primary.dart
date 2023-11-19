@@ -92,6 +92,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
                       margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
                     ),
                   ],
+                  controller: _tabController,
                 ),
               ),
             ),
