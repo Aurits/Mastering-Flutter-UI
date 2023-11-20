@@ -301,6 +301,32 @@ class _TimelineCardsState extends State<TimelineCards> {
                       color: Colors.grey[500],
                     ),
                   ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.bookmark_border,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                  Spacer(),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.comment_outlined,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                  Text(
+                    "12",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[500],
+                      fontSize: 18,
+                    ),
+                  ),
+                  Container(
+                    width: 10,
+                  ),
                 ],
               ),
             ),
