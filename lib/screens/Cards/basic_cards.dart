@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/img.dart';
+import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class BasicCards extends StatefulWidget {
@@ -36,6 +37,30 @@ class _BasicCardsState extends State<BasicCards> {
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Hello, reader you are welcome",
+                          style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        Container(
+                          height: 10,
+                        ),
+                        Container(
+                          child: Text(
+                            MyStrings.middle_lorem_ipsum,
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
