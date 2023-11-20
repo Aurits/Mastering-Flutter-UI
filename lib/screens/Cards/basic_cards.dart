@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/data/img.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class BasicCards extends StatefulWidget {
@@ -17,6 +18,30 @@ class _BasicCardsState extends State<BasicCards> {
           as PreferredSizeWidget?,
       body: SingleChildScrollView(
         padding: EdgeInsets.all(8),
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Card(
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    Img.get('image_7.jpg'),
+                    height: 140,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
