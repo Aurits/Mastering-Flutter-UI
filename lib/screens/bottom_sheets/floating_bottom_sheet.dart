@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/my_colors.dart';
+import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/my_text.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
@@ -106,7 +107,14 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
                       ),
                     ],
                   ),
-                  Text("Hello")
+                  Divider(
+                    height: 5,
+                  ),
+                  Text("My Sheet"),
+                  Text(
+                    MyStrings.middle_lorem_ipsum,
+                    style: MyText.body1(context)!.copyWith(),
+                  )
                 ],
               ),
             ),
