@@ -48,95 +48,31 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   }
 
   void showSheet(context) {
-    sheetController = showBottomSheet(
-        context: _scaffoldCtx,
+    TextStyle(color: Colors.white, height: 1.4, fontSize: 16);
+    showModalBottomSheet(
+        context: context,
         builder: (BuildContext bc) {
-          return Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            child: Container(
-              padding: EdgeInsets.all(15),
-              width: double.infinity,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "City Building",
-                              style: MyText.title(context)!
-                                  .copyWith(color: Colors.grey[800]),
-                            ),
-                            Text(
-                              "5 July 2023",
-                              style: MyText.title(context)!
-                                  .copyWith(color: Colors.grey[600]),
-                            ),
-                          ],
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {
-                          sheetController.close();
-                        },
-                        icon: Icon(
-                          Icons.close,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Divider(
-                    height: 5,
-                  ),
-                  Text(
-                    MyStrings.middle_lorem_ipsum,
-                    style: MyText.body1(context)!
-                        .copyWith(color: Colors.grey[800]),
-                  ),
-                  Container(
-                    height: 10,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Spacer(),
-                      StarRating(
-                        starCount: 5,
-                        rating: 5,
-                        color: Colors.orange[300],
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                  Container(
-                    height: 10,
-                  ),
-                  Container(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 0,
-                          horizontal: 25,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(18.0),
-                        ),
-                        backgroundColor: MyColors.accent,
-                        elevation: 0,
-                      ),
-                      child: Text(
-                        "SUBMIT RATING",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      onPressed: () {},
+          return Scaffold(
+            resizeToAvoidBottomInset: false,
+            body: SingleChildScrollView(
+              child: Container(
+                color: Colors.white,
+                padding: EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+                child: new Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 10,
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text("Property Type"),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           );
