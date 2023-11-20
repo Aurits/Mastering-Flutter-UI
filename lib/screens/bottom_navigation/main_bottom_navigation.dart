@@ -56,69 +56,34 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
           ),
         ],
       ),
-      //floating
-      floatingActionButton: Container(
-        margin: EdgeInsets.all(10),
-        child: FloatingActionButton(
-          heroTag: "fab1",
-          backgroundColor: Colors.teal[500],
-          onPressed: () {
-            print("Pressed");
-          },
-          elevation: 2,
-          child: Icon(
-            Icons.edit,
-            color: Colors.white,
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-
       body: Container(
         child: Column(
           children: <Widget>[
             Expanded(
-              child: Text(
-                "Hello",
-              ),
-            ),
-            Card(
-              elevation: 4,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
-              ),
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              margin: EdgeInsets.all(0),
-              color: Colors.white,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 4,
-                ),
-                child: TabBar(
-                  indicatorColor: Colors.transparent,
-                  indicatorSize: TabBarIndicatorSize.tab,
-                  indicatorWeight: 1,
-                  tabs: [
-                    Container(
-                      child: Tab(
-                        icon: Icon(
-                          Icons.apps,
-                          color: Colors.teal[600],
-                        ),
-                      ),
-                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
-                    ),
-                    Container(
-                      child: Tab(
-                        icon: Icon(
-                          Icons.settings_applications,
-                          color: Colors.teal[600],
-                        ),
-                      ),
-                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
-                    ),
-                  ],
-                  controller: _tabController,
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: 220,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: 25,
+                            backgroundColor: MyColors.grey_20,
+                          ),
+                          Container(
+                            width: 20,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[Container()],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
