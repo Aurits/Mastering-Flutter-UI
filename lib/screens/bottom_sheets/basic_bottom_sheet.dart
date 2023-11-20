@@ -82,6 +82,18 @@ class _BasicBottomSheetState extends State<BasicBottomSheet> {
                           color: Colors.pink[500],
                         ),
                       ),
+                    ),
+                    new ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue[700],
+                      ),
+                      onPressed: () {},
+                      child: new Text(
+                        "DETAILS",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     )
                   ],
                 ),
