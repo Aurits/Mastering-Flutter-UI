@@ -63,6 +63,28 @@ class _BasicBottomSheetState extends State<BasicBottomSheet> {
                     ),
                   ),
                 ),
+                Container(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    new TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.transparent,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: new Text(
+                        "CLOSE",
+                        style: TextStyle(
+                          color: Colors.pink[500],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           );
