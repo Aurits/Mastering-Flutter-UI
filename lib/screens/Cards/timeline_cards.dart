@@ -287,6 +287,23 @@ class _TimelineCardsState extends State<TimelineCards> {
                 )
               ],
             ),
+            Container(
+              height: 55,
+              child: Row(
+                children: [
+                  Container(
+                    width: 10,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.favorite_border,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
