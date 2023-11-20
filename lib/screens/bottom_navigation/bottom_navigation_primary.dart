@@ -29,7 +29,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.grey_5,
+      backgroundColor: MyColors.grey_10,
       //floating
       floatingActionButton: Container(
         margin: EdgeInsets.all(10),
