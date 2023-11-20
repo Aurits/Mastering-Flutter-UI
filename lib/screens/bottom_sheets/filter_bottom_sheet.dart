@@ -84,7 +84,24 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                             width: double.infinity,
                             height: 40,
                             decoration: myBoxDecoration(),
-                            child: Stack())),
+                            child: Stack(
+                              children: [
+                                new Padding(
+                                  padding: const EdgeInsets.only(left: 10.0),
+                                  child: new Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: new Text(
+                                      "Appartment & Unit",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ))),
                   ],
                 ),
               ),
