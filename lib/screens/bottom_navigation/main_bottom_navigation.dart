@@ -78,7 +78,13 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[Container()],
+                            children: <Widget>[
+                              Container(
+                                height: 10,
+                                width: 80,
+                                color: MyColors.grey_20,
+                              ),
+                            ],
                           ),
                         ],
                       )
