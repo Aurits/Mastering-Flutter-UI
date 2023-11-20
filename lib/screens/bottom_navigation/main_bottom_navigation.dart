@@ -187,10 +187,25 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
                       ),
                     ),
                     FloatingActionButton(
+                      heroTag: "fab1",
+                      backgroundColor: Colors.blue[900],
+                      elevation: 3,
                       onPressed: () {},
                       child: Icon(
                         Icons.add,
                         color: Colors.white,
+                      ),
+                    ),
+                    Tab(
+                      icon: Icon(
+                        Icons.notifications,
+                        size: 21,
+                      ),
+                    ),
+                    Tab(
+                      icon: Icon(
+                        Icons.shopping_cart,
+                        size: 21,
                       ),
                     ),
                   ],
