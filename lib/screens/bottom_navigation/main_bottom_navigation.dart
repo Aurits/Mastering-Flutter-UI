@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui/data/my_colors.dart';
 
 class MainBottomNavigation extends StatefulWidget {
@@ -15,7 +16,7 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 5, vsync: this, initialIndex: 2);
     _tabController!.addListener(() {});
   }
 
@@ -29,6 +30,32 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColors.grey_10,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.blue[900],
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarBrightness: Brightness.light,
+          statusBarColor: Colors.blue[900],
+        ),
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
       //floating
       floatingActionButton: Container(
         margin: EdgeInsets.all(10),
