@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/bottom_navigation/basic_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/bottom_navigation_primary.dart';
 import 'package:flutter_ui/screens/bottom_navigation/dark_basic_bottom_navigation.dart';
+import 'package:flutter_ui/screens/bottom_navigation/main_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/shifting_bottom_navigation.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
@@ -66,6 +67,15 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => PrimaryBottomNavigation(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Main Bottom Navigatin"),
+            onTap: () {
+              Get.to(
+                () => MainBottomNavigation(),
               );
             },
           ),
