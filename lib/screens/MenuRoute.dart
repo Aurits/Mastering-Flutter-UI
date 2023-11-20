@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/screens/Cards/basic_cards.dart';
 import 'package:flutter_ui/screens/bottom_navigation/basic_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/bottom_navigation_primary.dart';
 import 'package:flutter_ui/screens/bottom_navigation/dark_basic_bottom_navigation.dart';
@@ -34,6 +35,19 @@ class MenuRoute extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListTile(
+            leading: Icon(Icons.view_column),
+            title: Text("Cards"),
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Basic Cards"),
+            onTap: () {
+              Get.to(
+                () => BasicCards(),
+              );
+            },
+          ),
           ListTile(
             leading: Icon(Icons.view_column),
             title: Text("Bottom Sheets"),

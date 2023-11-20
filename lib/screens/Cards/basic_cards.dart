@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/widget/toolbar.dart';
 
 class BasicCards extends StatefulWidget {
   const BasicCards();
@@ -10,6 +11,10 @@ class BasicCards extends StatefulWidget {
 class _BasicCardsState extends State<BasicCards> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: CommonAppBar.getPrimaryAppbar(context, "Basic Cards")
+          as PreferredSizeWidget?,
+    );
   }
 }
