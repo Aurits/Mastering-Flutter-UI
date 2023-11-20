@@ -34,68 +34,43 @@ class _AppsBottomSheetState extends State<AppsBottomSheet> {
         builder: (BuildContext bc) {
           return Container(
             color: Colors.white,
-            padding: EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 15,
-            ),
+            padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
             child: Wrap(
-              spacing: 60,
               children: <Widget>[
-                Container(
-                  height: 10,
-                ),
-                Text(
-                  "Ambrose",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                ListTile(
+                  leading: Icon(
+                    Icons.visibility,
                   ),
+                  title: Text("Preview"),
+                  onTap: () {},
                 ),
-                Container(
-                  height: 10,
-                ),
-                Container(
-                  child: Text(
-                    MyStrings.middle_lorem_ipsum,
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 16,
-                    ),
+                ListTile(
+                  leading: Icon(
+                    Icons.visibility,
                   ),
+                  title: Text("Preview"),
+                  onTap: () {},
                 ),
-                Container(
-                  height: 10,
+                ListTile(
+                  leading: Icon(
+                    Icons.person_add,
+                  ),
+                  title: Text("Share"),
+                  onTap: () {},
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    new TextButton(
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.transparent,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: new Text(
-                        "CLOSE",
-                        style: TextStyle(
-                          color: Colors.pink[500],
-                        ),
-                      ),
-                    ),
-                    new ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue[700],
-                      ),
-                      onPressed: () {},
-                      child: new Text(
-                        "DETAILS",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    )
-                  ],
+                ListTile(
+                  leading: Icon(
+                    Icons.link,
+                  ),
+                  title: Text("Get Link"),
+                  onTap: () {},
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.content_copy,
+                  ),
+                  title: Text("Make a Copy"),
+                  onTap: () {},
                 ),
               ],
             ),
