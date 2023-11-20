@@ -6,6 +6,7 @@ import 'package:flutter_ui/screens/bottom_navigation/main_bottom_navigation.dart
 import 'package:flutter_ui/screens/bottom_navigation/shifting_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_sheets/apps_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/basic_bottom_sheet.dart';
+import 'package:flutter_ui/screens/bottom_sheets/floating_bottom_sheet.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -51,6 +52,15 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => AppsBottomSheet(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Floating Bottom Sheet"),
+            onTap: () {
+              Get.to(
+                () => FloatingBottomSheet(),
               );
             },
           ),

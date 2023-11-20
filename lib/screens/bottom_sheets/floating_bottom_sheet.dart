@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/my_strings.dart';
 
-class AppsBottomSheet extends StatefulWidget {
-  AppsBottomSheet();
+class FloatingBottomSheet extends StatefulWidget {
+  FloatingBottomSheet();
 
   @override
-  State<AppsBottomSheet> createState() => _AppsBottomSheetState();
+  State<FloatingBottomSheet> createState() => _FloatingBottomSheetState();
 }
 
-class _AppsBottomSheetState extends State<AppsBottomSheet> {
+class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _AppsBottomSheetState extends State<AppsBottomSheet> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         elevation: 0,
-        title: Text("Apps Bottom Sheet"),
+        title: Text("Floating Bottom Sheet"),
       ),
     );
   }
