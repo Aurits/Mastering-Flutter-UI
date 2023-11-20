@@ -72,6 +72,8 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                           "Property Type",
                           style: TextStyle(
                             color: Colors.grey[700],
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
