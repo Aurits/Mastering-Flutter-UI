@@ -129,7 +129,28 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                               ),
                             ),
                           ),
-                        )
+                        ),
+                        new Container(
+                          width: double.infinity,
+                          height: 40,
+                          decoration: myBoxDecoration(),
+                          child: Stack(children: [
+                            new Padding(
+                              padding: const EdgeInsets.only(left: 10.0),
+                              child: new Align(
+                                alignment: Alignment.centerLeft,
+                                child: new Text(
+                                  "Any",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ]),
+                        ),
                       ],
                     ),
                   )
