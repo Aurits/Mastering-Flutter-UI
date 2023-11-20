@@ -390,6 +390,178 @@ class _TimelineCardsState extends State<TimelineCards> {
               color: Colors.grey[400],
               thickness: 1,
             ),
+            Container(
+              color: Colors.grey[100],
+              padding: EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleImage(
+                    imageProvider: AssetImage(
+                      Img.get('image_7.jpg'),
+                    ),
+                    size: 40,
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "John Doe",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        Container(
+                          height: 5,
+                        ),
+                        Text(
+                          MyStrings.middle_lorem_ipsum,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Text(
+                    "12:00",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Divider(
+              height: 0,
+              color: Colors.grey[400],
+              thickness: 1,
+            ),
+            Container(
+              color: Colors.grey[100],
+              padding: EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleImage(
+                    imageProvider: AssetImage(
+                      Img.get('image_7.jpg'),
+                    ),
+                    size: 40,
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "John Doe",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        Container(
+                          height: 5,
+                        ),
+                        Text(
+                          MyStrings.middle_lorem_ipsum,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Text(
+                    "12:00",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Divider(
+              height: 0,
+              color: Colors.grey[400],
+              thickness: 1,
+            ),
+            Container(
+              color: Colors.grey[100],
+              padding: EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleImage(
+                    imageProvider: AssetImage(
+                      Img.get('image_7.jpg'),
+                    ),
+                    size: 40,
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "John Doe",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        Container(
+                          height: 5,
+                        ),
+                        Text(
+                          MyStrings.middle_lorem_ipsum,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Text(
+                    "12:00",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
