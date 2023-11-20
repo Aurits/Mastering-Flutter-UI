@@ -114,7 +114,6 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       ),
                     ),
                   ),
-                  
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
@@ -218,9 +217,8 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                         ),
                       ],
                     ),
-                  )
-                
-                Padding(
+                  ),
+                  Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
                       children: <Widget>[
@@ -232,7 +230,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                                 child: Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    "Min Price",
+                                    "Min Bedrooms",
                                     style: TextStyle(
                                       color: Colors.grey[700],
                                     ),
@@ -282,7 +280,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                                 child: Align(
                                   alignment: Alignment.centerLeft,
                                   child: Text(
-                                    "Max Price",
+                                    "Max Bedrooms",
                                     style: TextStyle(
                                       color: Colors.grey[700],
                                     ),
@@ -324,8 +322,6 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       ],
                     ),
                   )
-                
-                
                 ],
               ),
             ),
