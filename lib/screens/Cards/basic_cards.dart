@@ -130,6 +130,32 @@ class _BasicCardsState extends State<BasicCards> {
                       )),
                     ],
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.bookmark_border,
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.share,
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
