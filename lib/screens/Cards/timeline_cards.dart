@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/img.dart';
 import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/data/my_strings.dart';
+import 'package:flutter_ui/widget/circle_image.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class TimelineCards extends StatefulWidget {
@@ -327,6 +328,50 @@ class _TimelineCardsState extends State<TimelineCards> {
                   Container(
                     width: 10,
                   ),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.grey[100],
+              padding: EdgeInsets.all(16),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleImage(
+                    imageProvider: AssetImage(
+                      Img.get('photo_female_8_jpg'),
+                    ),
+                    size: 40,
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "John Doe",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        Container(
+                          height: 5,
+                        ),
+                        Text(
+                          MyStrings.middle_lorem_ipsum,
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
