@@ -65,6 +65,15 @@ class MenuRoute extends StatelessWidget {
             },
           ),
           ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Filter Bottom Sheet"),
+            onTap: () {
+              Get.to(
+                () => FloatingBottomSheet(),
+              );
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.view_column),
             title: Text("Bottom Navigatin"),
           ),
