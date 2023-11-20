@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/Cards/basic_cards.dart';
+import 'package:flutter_ui/screens/Cards/timeline_cards.dart';
 import 'package:flutter_ui/screens/bottom_navigation/basic_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/bottom_navigation_primary.dart';
 import 'package:flutter_ui/screens/bottom_navigation/dark_basic_bottom_navigation.dart';
@@ -45,6 +46,15 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => BasicCards(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Timeline Cards"),
+            onTap: () {
+              Get.to(
+                () => TimelineCards(),
               );
             },
           ),

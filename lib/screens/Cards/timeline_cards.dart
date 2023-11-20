@@ -4,19 +4,19 @@ import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
-class BasicCards extends StatefulWidget {
-  const BasicCards();
+class TimelineCards extends StatefulWidget {
+  const TimelineCards();
 
   @override
-  State<BasicCards> createState() => _BasicCardsState();
+  State<TimelineCards> createState() => _TimelineCardsState();
 }
 
-class _BasicCardsState extends State<BasicCards> {
+class _TimelineCardsState extends State<TimelineCards> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      appBar: CommonAppBar.getPrimaryAppbar(context, "Basic Cards")
+      appBar: CommonAppBar.getPrimaryAppbar(context, "Timeline Cards")
           as PreferredSizeWidget?,
       body: SingleChildScrollView(
         padding: EdgeInsets.all(8),
