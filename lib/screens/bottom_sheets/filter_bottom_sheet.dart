@@ -50,76 +50,96 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
   void showSheet(context) {
     TextStyle(color: Colors.white, height: 1.4, fontSize: 16);
     showModalBottomSheet(
-        context: context,
-        builder: (BuildContext bc) {
-          return Scaffold(
-            resizeToAvoidBottomInset: false,
-            body: SingleChildScrollView(
-              child: Container(
-                color: Colors.white,
-                padding: EdgeInsets.symmetric(vertical: 0, horizontal: 5),
-                child: new Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                      height: 10,
+      context: context,
+      builder: (BuildContext bc) {
+        return Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: SingleChildScrollView(
+            child: Container(
+              color: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+              child: new Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Container(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Property Type",
+                        style: TextStyle(
+                          color: Colors.grey[700],
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Property Type",
-                          style: TextStyle(
-                            color: Colors.grey[700],
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: new Container(
+                      width: double.infinity,
+                      height: 40,
+                      decoration: myBoxDecoration(),
+                      child: Stack(
+                        children: [
+                          new Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: new Align(
+                              alignment: Alignment.centerLeft,
+                              child: new Text(
+                                "Appartment & Unit",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: new Container(
-                        width: double.infinity,
-                        height: 40,
-                        decoration: myBoxDecoration(),
-                        child: Stack(
-                          children: [
-                            new Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: new Align(
-                                alignment: Alignment.centerLeft,
-                                child: new Text(
-                                  "Appartment & Unit",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
+                          new Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: new Align(
+                              alignment: Alignment.centerRight,
+                              child: new Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.grey[700],
                               ),
                             ),
-                            new Padding(
-                              padding: const EdgeInsets.only(right: 10.0),
-                              child: new Align(
-                                alignment: Alignment.centerRight,
-                                child: new Icon(
-                                  Icons.arrow_drop_down,
-                                  color: Colors.grey[700],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: <Widget>[
+                        new Padding(
+                          padding: const EdgeInsets.only(bottom: 10.0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Min Price",
+                              style: TextStyle(
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
-          );
-        });
+          ),
+        );
+      },
+    );
   }
 }
 
