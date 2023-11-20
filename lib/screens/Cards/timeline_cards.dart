@@ -385,6 +385,11 @@ class _TimelineCardsState extends State<TimelineCards> {
                 ],
               ),
             ),
+            Divider(
+              height: 0,
+              color: Colors.grey[400],
+              thickness: 1,
+            ),
           ],
         ),
       ),
