@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/img.dart';
+import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
@@ -61,6 +62,22 @@ class _BasicCardsState extends State<BasicCards> {
                         ),
                       ],
                     ),
+                  ),
+                  Row(
+                    children: [
+                      TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Colors.transparent,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            "Share",
+                            style: TextStyle(
+                              color: MyColors.accent,
+                              fontSize: 24,
+                            ),
+                          ))
+                    ],
                   ),
                 ],
               ),
