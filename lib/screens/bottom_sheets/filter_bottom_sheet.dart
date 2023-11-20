@@ -79,15 +79,12 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: new Container(
-                          width: double.infinity,
-                          height: 40,
-                          decoration: myBoxDecoration(),
-                          child: Stack(
-                            children: [],
-                          )),
-                    ),
+                        padding: const EdgeInsets.all(10.0),
+                        child: new Container(
+                            width: double.infinity,
+                            height: 40,
+                            decoration: myBoxDecoration(),
+                            child: Stack())),
                   ],
                 ),
               ),
