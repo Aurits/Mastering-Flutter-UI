@@ -366,12 +366,22 @@ class _TimelineCardsState extends State<TimelineCards> {
                           MyStrings.middle_lorem_ipsum,
                           style: TextStyle(
                             fontSize: 15,
-                            color: Colors.grey[700],
+                            color: Colors.grey[600],
                           ),
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  Container(
+                    width: 15,
+                  ),
+                  Text(
+                    "12:00",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[600],
+                    ),
+                  ),
                 ],
               ),
             ),
