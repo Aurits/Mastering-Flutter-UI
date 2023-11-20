@@ -10,20 +10,18 @@ class FloatingBottomSheet extends StatefulWidget {
 }
 
 class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
+  // ignore: unused_field
+  late BuildContext _scaffoldCtx;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          showBottonSheet();
-        },
-        child: Icon(
-          Icons.apps,
-        ),
-      ),
       backgroundColor: MyColors.grey_20,
       appBar: CommonAppBar.getPrimaryAppbar(context, "floating")
           as PreferredSizeWidget?,
+      body: Builder(builder: (BuildContext ctx) {
+        _scaffoldCtx = ctx;
+        return Center();
+      }),
     );
   }
 
