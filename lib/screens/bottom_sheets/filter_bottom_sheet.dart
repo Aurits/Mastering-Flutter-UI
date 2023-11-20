@@ -23,6 +23,34 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
       backgroundColor: MyColors.grey_20,
       appBar: CommonAppBar.getPrimaryAppbar(context, "Filter")
           as PreferredSizeWidget?,
+      body: Center(
+        child: Text(
+          "Press button \nbelow",
+          textAlign: TextAlign.center,
+          style: MyText.display1(context)!.copyWith(
+            color: Colors.grey[300],
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        heroTag: "fab",
+        backgroundColor: Colors.pink[500],
+        elevation: 3,
+        child: Icon(
+          Icons.filter_list,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          setState(() {
+            showSheet = !showSheet;
+            if (showSheet) {
+              _showSheet();
+            } else {
+              Navigator.pop(_scaffoldCtx);
+            }
+          });
+        },
+      ),
     );
   }
 
