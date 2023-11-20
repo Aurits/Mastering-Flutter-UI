@@ -372,6 +372,24 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                        ),
+                        child: Text(
+                          "SEARCH",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
