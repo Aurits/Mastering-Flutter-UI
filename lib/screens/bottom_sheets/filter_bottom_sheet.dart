@@ -68,7 +68,12 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       padding: const EdgeInsets.only(left: 10.0),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: Text("Property Type"),
+                        child: Text(
+                          "Property Type",
+                          style: TextStyle(
+                            color: Colors.grey[700],
+                          ),
+                        ),
                       ),
                     )
                   ],
