@@ -66,17 +66,31 @@ class _BasicCardsState extends State<BasicCards> {
                   Row(
                     children: [
                       TextButton(
-                          style: TextButton.styleFrom(
-                            foregroundColor: Colors.transparent,
+                        style: TextButton.styleFrom(
+                          foregroundColor: Colors.transparent,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          "Share",
+                          style: TextStyle(
+                            color: MyColors.accent,
+                            fontSize: 20,
                           ),
-                          onPressed: () {},
-                          child: Text(
-                            "Share",
-                            style: TextStyle(
-                              color: MyColors.accent,
-                              fontSize: 24,
-                            ),
-                          ))
+                        ),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          foregroundColor: Colors.transparent,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          "Explore",
+                          style: TextStyle(
+                            color: MyColors.accent,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ],
