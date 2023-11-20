@@ -66,14 +66,41 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
   }
 
   void _showSheet() {
-    showModalBottomSheet(
-        context: context,
+    sheetController = showBottomSheet(
+        context: _scaffoldCtx,
         builder: (BuildContext bc) {
-          return Container(
-            color: Colors.white,
-            padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-            child: Wrap(
-              children: <Widget>[],
+          return Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: Container(
+              padding: EdgeInsets.all(15),
+              width: double.infinity,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              "City Building",
+                              style: MyText.title(context)!
+                                  .copyWith(color: Colors.grey[800]),
+                            ),
+                            Text(
+                              "5 July 2023",
+                              style: MyText.title(context)!
+                                  .copyWith(color: Colors.grey[600]),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           );
         });
