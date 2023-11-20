@@ -15,6 +15,9 @@ class _BasicCardsState extends State<BasicCards> {
       backgroundColor: Colors.grey[200],
       appBar: CommonAppBar.getPrimaryAppbar(context, "Basic Cards")
           as PreferredSizeWidget?,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(8),
+      ),
     );
   }
 }
