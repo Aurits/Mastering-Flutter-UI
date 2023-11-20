@@ -29,20 +29,34 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
               : Column(
                   children: <Widget>[
                     FloatingActionButton(
-                     
                       heroTag: "fab",
                       backgroundColor: Colors.pink[500],
                       elevation: 3,
-                      child: Icon(Icons.star, color: Colors.white,),
-                       onPressed: () {
+                      child: Icon(
+                        Icons.star,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
                         setState(() {
                           showSheet = !showSheet;
-                          if(showSheet){_showSheet()}else{Navigator.pop(_scaffoldCtx);}
+                          if (showSheet) {
+                            _showSheet();
+                          } else {
+                            Navigator.pop(_scaffoldCtx);
+                          }
                         });
-                       },
+                      },
                     ),
-                    Container(height: 20,),
-                    Text("Press button \nabove", textAlign: TextAlign.center, style: MyText.display1(context)!.copyWith(color: Colors.grey[600],),)
+                    Container(
+                      height: 20,
+                    ),
+                    Text(
+                      "Press button \nabove",
+                      textAlign: TextAlign.center,
+                      style: MyText.display1(context)!.copyWith(
+                        color: Colors.grey[600],
+                      ),
+                    )
                   ],
                 ),
         );
@@ -50,7 +64,7 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
     );
   }
 
-  void showBottonSheet() {
+  void _showSheet() {
     showModalBottomSheet(
         context: context,
         builder: (BuildContext bc) {
