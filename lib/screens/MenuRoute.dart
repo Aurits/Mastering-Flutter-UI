@@ -6,6 +6,7 @@ import 'package:flutter_ui/screens/bottom_navigation/main_bottom_navigation.dart
 import 'package:flutter_ui/screens/bottom_navigation/shifting_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_sheets/apps_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/basic_bottom_sheet.dart';
+import 'package:flutter_ui/screens/bottom_sheets/filter_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/floating_bottom_sheet.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
@@ -69,7 +70,7 @@ class MenuRoute extends StatelessWidget {
             title: Text("Filter Bottom Sheet"),
             onTap: () {
               Get.to(
-                () => FloatingBottomSheet(),
+                () => FilterBottomSheet(),
               );
             },
           ),
