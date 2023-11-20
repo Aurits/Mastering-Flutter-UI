@@ -101,7 +101,7 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
                       ),
                       IconButton(
                         onPressed: () {
-                          sheetController.close;
+                          sheetController.close();
                         },
                         icon: Icon(
                           Icons.close,
