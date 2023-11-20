@@ -27,6 +27,7 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
           child: showSheet
               ? Container()
               : Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     FloatingActionButton(
                       heroTag: "fab",
