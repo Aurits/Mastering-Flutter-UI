@@ -100,7 +100,9 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          sheetController.close;
+                        },
                         icon: Icon(
                           Icons.close,
                           color: Colors.grey[600],
