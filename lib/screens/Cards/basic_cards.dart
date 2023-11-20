@@ -159,6 +159,134 @@ class _BasicCardsState extends State<BasicCards> {
                 ],
               ),
             ),
+            Row(
+              children: [
+                Expanded(
+                  child: Card(
+                    shape: BeveledRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            Image.asset(
+                              Img.get('image_4.jpg'),
+                              height: 160,
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            ),
+                            Positioned.fill(
+                                child: Container(
+                              padding: EdgeInsets.all(15),
+                              child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  "Hello, reader",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            )),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.favorite_border,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.share,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    shape: BeveledRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Stack(
+                          children: [
+                            Image.asset(
+                              Img.get('image_4.jpg'),
+                              height: 160,
+                              width: double.infinity,
+                              fit: BoxFit.cover,
+                            ),
+                            Positioned.fill(
+                                child: Container(
+                              padding: EdgeInsets.all(15),
+                              child: Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Text(
+                                  "Hello, reader",
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            )),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.favorite_border,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.share,
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
