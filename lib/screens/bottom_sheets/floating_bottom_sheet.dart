@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/my_text.dart';
+import 'package:flutter_ui/widget/star_rating.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class FloatingBottomSheet extends StatefulWidget {
@@ -110,11 +111,49 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
                   Divider(
                     height: 5,
                   ),
-                  Text("My Sheet"),
                   Text(
                     MyStrings.middle_lorem_ipsum,
-                    style: MyText.body1(context)!.copyWith(),
-                  )
+                    style: MyText.body1(context)!
+                        .copyWith(color: Colors.grey[800]),
+                  ),
+                  Container(
+                    height: 10,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Spacer(),
+                      StarRating(
+                        starCount: 5,
+                        rating: 5,
+                        color: Colors.orange[300],
+                      ),
+                      Spacer(),
+                    ],
+                  ),
+                  Container(
+                    height: 10,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 0,
+                          horizontal: 25,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(18.0),
+                        ),
+                        backgroundColor: MyColors.accent,
+                        elevation: 0,
+                      ),
+                      child: Text(
+                        "SUBMIT RATING",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
                 ],
               ),
             ),
