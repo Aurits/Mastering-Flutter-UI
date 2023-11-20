@@ -339,7 +339,7 @@ class _TimelineCardsState extends State<TimelineCards> {
                 children: [
                   CircleImage(
                     imageProvider: AssetImage(
-                      Img.get('photo_female_7_jpg'),
+                      Img.get('image_7.jpg'),
                     ),
                     size: 40,
                   ),
