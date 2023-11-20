@@ -96,6 +96,9 @@ class _BasicCardsState extends State<BasicCards> {
                 ],
               ),
             ),
+            Container(
+              height: 5,
+            ),
           ],
         ),
       ),
