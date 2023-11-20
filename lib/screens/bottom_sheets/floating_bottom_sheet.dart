@@ -36,43 +36,7 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
             color: Colors.white,
             padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
             child: Wrap(
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(
-                    Icons.visibility,
-                  ),
-                  title: Text("Preview"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.send,
-                  ),
-                  title: Text("Send"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.person_add,
-                  ),
-                  title: Text("Share"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.link,
-                  ),
-                  title: Text("Get Link"),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(
-                    Icons.content_copy,
-                  ),
-                  title: Text("Make a Copy"),
-                  onTap: () {},
-                ),
-              ],
+              children: <Widget>[],
             ),
           );
         });
