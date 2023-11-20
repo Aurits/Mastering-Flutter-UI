@@ -41,7 +41,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
           },
           elevation: 2,
           child: Icon(
-            Icons.shopping_cart,
+            Icons.edit,
             color: Colors.white,
           ),
         ),
@@ -85,7 +85,7 @@ class _PrimaryBottomNavigationState extends State<PrimaryBottomNavigation>
                     Container(
                       child: Tab(
                         icon: Icon(
-                          Icons.local_offer,
+                          Icons.settings_applications,
                           color: Colors.teal[600],
                         ),
                       ),
