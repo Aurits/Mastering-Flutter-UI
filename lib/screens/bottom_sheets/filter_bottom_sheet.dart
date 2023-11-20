@@ -118,38 +118,102 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
                       children: <Widget>[
-                        new Padding(
-                          padding: const EdgeInsets.only(bottom: 10.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Min Price",
-                              style: TextStyle(
-                                color: Colors.grey[700],
-                              ),
-                            ),
-                          ),
-                        ),
-                        new Container(
-                          width: double.infinity,
-                          height: 40,
-                          decoration: myBoxDecoration(),
-                          child: Stack(children: [
-                            new Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: new Align(
-                                alignment: Alignment.centerLeft,
-                                child: new Text(
-                                  "Any",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500,
+                        new Flexible(
+                          child: Column(
+                            children: <Widget>[
+                              new Padding(
+                                padding: const EdgeInsets.only(bottom: 10.0),
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Min Price",
+                                    style: TextStyle(
+                                      color: Colors.grey[700],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ]),
+                              new Container(
+                                width: double.infinity,
+                                height: 40,
+                                decoration: myBoxDecoration(),
+                                child: Stack(
+                                  children: [
+                                    new Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 10.0),
+                                      child: new Align(
+                                        alignment: Alignment.centerLeft,
+                                        child:
+                                            Text(new String.fromCharCode(1000)),
+                                      ),
+                                    ),
+                                    new Padding(
+                                      padding: EdgeInsets.only(right: 10.0),
+                                      child: new Align(
+                                        alignment: Alignment.centerRight,
+                                        child: new Icon(
+                                          Icons.arrow_drop_down,
+                                          color: Colors.grey[700],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          flex: 1,
+                        ),
+                        Container(
+                          width: 40,
+                        ),
+                        new Flexible(
+                          child: Column(
+                            children: <Widget>[
+                              new Padding(
+                                padding: const EdgeInsets.only(bottom: 10.0),
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    "Max Price",
+                                    style: TextStyle(
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              new Container(
+                                width: double.infinity,
+                                height: 40,
+                                decoration: myBoxDecoration(),
+                                child: Stack(
+                                  children: [
+                                    new Padding(
+                                      padding:
+                                          const EdgeInsets.only(left: 10.0),
+                                      child: new Align(
+                                        alignment: Alignment.centerLeft,
+                                        child:
+                                            Text(new String.fromCharCode(5000)),
+                                      ),
+                                    ),
+                                    new Padding(
+                                      padding: EdgeInsets.only(right: 10.0),
+                                      child: new Align(
+                                        alignment: Alignment.centerRight,
+                                        child: new Icon(
+                                          Icons.arrow_drop_down,
+                                          color: Colors.grey[700],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          flex: 1,
                         ),
                       ],
                     ),
@@ -170,8 +234,7 @@ BoxDecoration myBoxDecoration() {
       color: Colors.grey[300]!,
       width: 1.0,
     ),
-    borderRadius: BorderRadius.all(
-        Radius.circular(5.0) //                 <--- border radius here
+    borderRadius: BorderRadius.all(Radius.circular(5.0) //
         ),
   );
 }
