@@ -171,24 +171,27 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
                   indicatorColor: Colors.transparent,
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicatorWeight: 1,
+                  unselectedLabelColor: Colors.blue[900],
+                  labelColor: Colors.blue[900],
                   tabs: [
-                    Container(
-                      child: Tab(
-                        icon: Icon(
-                          Icons.apps,
-                          color: Colors.teal[600],
-                        ),
+                    Tab(
+                      icon: Icon(
+                        Icons.home,
+                        size: 21,
                       ),
-                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
                     ),
-                    Container(
-                      child: Tab(
-                        icon: Icon(
-                          Icons.settings_applications,
-                          color: Colors.teal[600],
-                        ),
+                    Tab(
+                      icon: Icon(
+                        Icons.event_seat,
+                        size: 21,
                       ),
-                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                    FloatingActionButton(
+                      onPressed: () {},
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                   controller: _tabController,
