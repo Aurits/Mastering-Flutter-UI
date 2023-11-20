@@ -96,9 +96,17 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.close,
+                          color: Colors.grey[600],
+                        ),
+                      ),
                     ],
                   ),
+                  Text("Hello")
                 ],
               ),
             ),
