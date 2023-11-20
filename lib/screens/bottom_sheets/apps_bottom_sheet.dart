@@ -46,9 +46,9 @@ class _AppsBottomSheetState extends State<AppsBottomSheet> {
                 ),
                 ListTile(
                   leading: Icon(
-                    Icons.visibility,
+                    Icons.send,
                   ),
-                  title: Text("Preview"),
+                  title: Text("Send"),
                   onTap: () {},
                 ),
                 ListTile(
