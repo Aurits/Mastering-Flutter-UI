@@ -155,6 +155,46 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
                 ),
               ),
             ),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              margin: EdgeInsets.all(0),
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 4,
+                ),
+                child: TabBar(
+                  indicatorColor: Colors.transparent,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicatorWeight: 1,
+                  tabs: [
+                    Container(
+                      child: Tab(
+                        icon: Icon(
+                          Icons.apps,
+                          color: Colors.teal[600],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                    Container(
+                      child: Tab(
+                        icon: Icon(
+                          Icons.settings_applications,
+                          color: Colors.teal[600],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                  ],
+                  controller: _tabController,
+                ),
+              ),
+            ),
           ],
         ),
       ),
