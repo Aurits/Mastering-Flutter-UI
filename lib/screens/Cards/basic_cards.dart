@@ -99,6 +99,40 @@ class _BasicCardsState extends State<BasicCards> {
             Container(
               height: 5,
             ),
+            Card(
+              shape: BeveledRectangleBorder(
+                  borderRadius: BorderRadius.circular(4)),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Stack(
+                    children: [
+                      Image.asset(
+                        Img.get('image_4.jpg'),
+                        height: 160,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned.fill(
+                          child: Container(
+                        padding: EdgeInsets.all(15),
+                        child: Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Text(
+                            "Hello, reader you are welcome",
+                            style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      )),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
