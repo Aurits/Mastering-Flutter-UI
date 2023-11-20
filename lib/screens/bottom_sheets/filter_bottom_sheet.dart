@@ -15,7 +15,7 @@ class FilterBottomSheet extends StatefulWidget {
 class _FilterBottomSheetState extends State<FilterBottomSheet> {
   // ignore: unused_field
   late BuildContext _scaffoldCtx;
-  bool showSheet = false;
+
   late PersistentBottomSheetController sheetController;
   @override
   Widget build(BuildContext context) {
@@ -41,20 +41,13 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
           color: Colors.white,
         ),
         onPressed: () {
-          setState(() {
-            showSheet = !showSheet;
-            if (showSheet) {
-              _showSheet();
-            } else {
-              Navigator.pop(_scaffoldCtx);
-            }
-          });
+          showSheet(context);
         },
       ),
     );
   }
 
-  void _showSheet() {
+  void showSheet(context) {
     sheetController = showBottomSheet(
         context: _scaffoldCtx,
         builder: (BuildContext bc) {
