@@ -248,8 +248,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                                           const EdgeInsets.only(left: 10.0),
                                       child: new Align(
                                         alignment: Alignment.centerLeft,
-                                        child:
-                                            Text(new String.fromCharCode(1000)),
+                                        child: Text(new String.fromCharCode(1)),
                                       ),
                                     ),
                                     new Padding(
@@ -298,8 +297,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                                           const EdgeInsets.only(left: 10.0),
                                       child: new Align(
                                         alignment: Alignment.centerLeft,
-                                        child:
-                                            Text(new String.fromCharCode(5000)),
+                                        child: Text(new String.fromCharCode(5)),
                                       ),
                                     ),
                                     new Padding(
