@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class FloatingBottomSheet extends StatefulWidget {
@@ -20,6 +21,7 @@ class _FloatingBottomSheetState extends State<FloatingBottomSheet> {
           Icons.apps,
         ),
       ),
+      backgroundColor: MyColors.grey_20,
       appBar: CommonAppBar.getPrimaryAppbar(context, "floating")
           as PreferredSizeWidget?,
     );
