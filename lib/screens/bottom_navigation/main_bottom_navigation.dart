@@ -1,79 +1,102 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/model/bottom_nav.dart';
+import 'package:flutter_ui/data/my_colors.dart';
 
 class MainBottomNavigation extends StatefulWidget {
   MainBottomNavigation();
-  final List<BottomNav> itemsNav = <BottomNav>[
-    BottomNav(
-      'Movie',
-      Icons.ondemand_video,
-      Colors.blueGrey[700],
-    ),
-    BottomNav(
-      'Music',
-      Icons.music_note,
-      Colors.pink[800],
-    ),
-    BottomNav(
-      'Books',
-      Icons.book,
-      Colors.grey[700],
-    ),
-    BottomNav(
-      'Newsstand',
-      Icons.chrome_reader_mode,
-      Colors.teal[800],
-    ),
-  ];
 
   @override
-  State<MainBottomNavigation> createState() => _MainBottomNavigationState();
+  State<MainBottomNavigation> createState() => new _MainBottomNavigationState();
 }
 
 class _MainBottomNavigationState extends State<MainBottomNavigation>
-    with TickerProviderStateMixin<MainBottomNavigation> {
-  int currentIndex = 0;
-  late BuildContext ctx;
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
 
-  void onBackPress() {
-    if (Navigator.of(ctx).canPop()) {
-      Navigator.of(ctx).pop();
-    }
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+    _tabController!.addListener(() {});
+  }
+
+  @override
+  void dispose() {
+    _tabController!.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    ctx = context;
     return Scaffold(
-      body: Center(
-        child: Text(
-          "TEST",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+      backgroundColor: MyColors.grey_10,
+      //floating
+      floatingActionButton: Container(
+        margin: EdgeInsets.all(10),
+        child: FloatingActionButton(
+          heroTag: "fab1",
+          backgroundColor: Colors.teal[500],
+          onPressed: () {
+            print("Pressed");
+          },
+          elevation: 2,
+          child: Icon(
+            Icons.edit,
+            color: Colors.white,
           ),
         ),
       ),
-      backgroundColor: Colors.grey[200],
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.blue,
-        onTap: (int index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
-        selectedItemColor: Colors.blue[400],
-        unselectedItemColor: Colors.blue[700],
-        currentIndex: currentIndex,
-        items: widget.itemsNav.map(
-          (BottomNav d) {
-            return BottomNavigationBarItem(
-              backgroundColor: d.color,
-              icon: Icon(d.icon),
-              label: d.title,
-            );
-          },
-        ).toList(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Text(
+                "Hello",
+              ),
+            ),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              margin: EdgeInsets.all(0),
+              color: Colors.white,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  vertical: 4,
+                ),
+                child: TabBar(
+                  indicatorColor: Colors.transparent,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicatorWeight: 1,
+                  tabs: [
+                    Container(
+                      child: Tab(
+                        icon: Icon(
+                          Icons.apps,
+                          color: Colors.teal[600],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                    Container(
+                      child: Tab(
+                        icon: Icon(
+                          Icons.settings_applications,
+                          color: Colors.teal[600],
+                        ),
+                      ),
+                      margin: EdgeInsets.fromLTRB(0, 0, 15, 0),
+                    ),
+                  ],
+                  controller: _tabController,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
