@@ -4,6 +4,7 @@ import 'package:flutter_ui/screens/bottom_navigation/bottom_navigation_primary.d
 import 'package:flutter_ui/screens/bottom_navigation/dark_basic_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/main_bottom_navigation.dart';
 import 'package:flutter_ui/screens/bottom_navigation/shifting_bottom_navigation.dart';
+import 'package:flutter_ui/screens/bottom_sheets/basic_bottom_sheet.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -30,6 +31,19 @@ class MenuRoute extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListTile(
+            leading: Icon(Icons.view_column),
+            title: Text("Bottom Sheets"),
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Basic Bottom Sheet"),
+            onTap: () {
+              Get.to(
+                () => BasicBottomSheet(),
+              );
+            },
+          ),
           ListTile(
             leading: Icon(Icons.view_column),
             title: Text("Bottom Navigatin"),
