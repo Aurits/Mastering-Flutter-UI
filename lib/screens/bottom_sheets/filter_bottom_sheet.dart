@@ -75,7 +75,17 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: new Container(
+                          width: double.infinity,
+                          height: 40,
+                          decoration: myBoxDecoration(),
+                          child: Stack(
+                            children: [],
+                          )),
+                    ),
                   ],
                 ),
               ),
@@ -83,4 +93,16 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
           );
         });
   }
+}
+
+BoxDecoration myBoxDecoration() {
+  return BoxDecoration(
+    border: Border.all(
+      color: Colors.grey[300]!,
+      width: 1.0,
+    ),
+    borderRadius: BorderRadius.all(
+        Radius.circular(5.0) //                 <--- border radius here
+        ),
+  );
 }
