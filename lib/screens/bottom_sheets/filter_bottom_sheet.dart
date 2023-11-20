@@ -336,6 +336,42 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: new Container(
+                      width: double.infinity,
+                      height: 40,
+                      decoration: myBoxDecoration(),
+                      child: Stack(
+                        children: [
+                          new Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: new Align(
+                              alignment: Alignment.centerLeft,
+                              child: new Text(
+                                "400",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                          new Padding(
+                            padding: const EdgeInsets.only(right: 10.0),
+                            child: new Align(
+                              alignment: Alignment.centerRight,
+                              child: new Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.grey[700],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
