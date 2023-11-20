@@ -4,10 +4,26 @@ import 'package:flutter_ui/model/bottom_nav.dart';
 class MainBottomNavigation extends StatefulWidget {
   MainBottomNavigation();
   final List<BottomNav> itemsNav = <BottomNav>[
-    BottomNav('Home', Icons.store, null),
-    BottomNav('Business', Icons.business, null),
-    BottomNav('Shop', Icons.shopping_cart, null),
-    BottomNav('Profile', Icons.account_circle, null),
+    BottomNav(
+      'Movie',
+      Icons.ondemand_video,
+      Colors.blueGrey[700],
+    ),
+    BottomNav(
+      'Music',
+      Icons.music_note,
+      Colors.pink[800],
+    ),
+    BottomNav(
+      'Books',
+      Icons.book,
+      Colors.grey[700],
+    ),
+    BottomNav(
+      'Newsstand',
+      Icons.chrome_reader_mode,
+      Colors.teal[800],
+    ),
   ];
 
   @override
@@ -52,6 +68,7 @@ class _MainBottomNavigationState extends State<MainBottomNavigation>
         items: widget.itemsNav.map(
           (BottomNav d) {
             return BottomNavigationBarItem(
+              backgroundColor: d.color,
               icon: Icon(d.icon),
               label: d.title,
             );
