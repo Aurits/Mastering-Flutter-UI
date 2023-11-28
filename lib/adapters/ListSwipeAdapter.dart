@@ -29,6 +29,10 @@ class ItemTile extends StatefulWidget {
     required this.onSwipe,
   });
 
+  void onItemSwipe() {
+    onSwipe(index, object);
+  }
+
   @override
   State<ItemTile> createState() => _ItemTileState();
 }
