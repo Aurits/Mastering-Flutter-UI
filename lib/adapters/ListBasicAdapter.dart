@@ -33,20 +33,41 @@ class ItemsTile extends StatefulWidget {
       required this.object,
       required this.onClick});
 
-  void onItemClick(People obj) {
-    onClick(index, obj);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        onItemClick(object);
+        onClick(object);
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5),
-        child: Row(),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              width: 20,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              child: CircleAvatar(backgroundImage: AssetImage(object.image)),
+            ),
+            Container(
+              width: 20,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [],
+              ),
+            )
+          ],
+        ),
       ),
     );
+  }
+
+  State<StatefulWidget> createState() {
+    throw UnimplementedError();
   }
 }

@@ -25,6 +25,7 @@ class _BasicListsState extends State<BasicLists> {
     items.addAll(Dummy.getPeopleData());
     items.addAll(Dummy.getPeopleData());
     items.shuffle();
+
     return Scaffold(
       appBar: CommonAppBar.getPrimaryAppbar(context, "Basic Lists")
           as PreferredSizeWidget?,
