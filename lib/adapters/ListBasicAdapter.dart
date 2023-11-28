@@ -55,6 +55,12 @@ class _ItemTileState extends State<ItemTile> {
           children: [
             Container(
               width: 20,
+            ),
+            Container(
+              width: 50,
+              height: 50,
+              child: CircleAvatar(
+                  backgroundImage: AssetImage(widget.object.image)),
             )
           ],
         ),
