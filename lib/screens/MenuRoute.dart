@@ -12,6 +12,9 @@ import 'package:flutter_ui/screens/bottom_sheets/basic_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/filter_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/floating_bottom_sheet.dart';
 import 'package:flutter_ui/screens/lists/basic_list.dart';
+import 'package:flutter_ui/screens/lists/drag_list.dart';
+import 'package:flutter_ui/screens/lists/expand_list.dart';
+import 'package:flutter_ui/screens/lists/section_list.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -48,6 +51,33 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => BasicLists(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Sectioned Lists"),
+            onTap: () {
+              Get.to(
+                () => SectionLists(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Expanded Lists"),
+            onTap: () {
+              Get.to(
+                () => ExpandLists(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Drag Lists"),
+            onTap: () {
+              Get.to(
+                () => DragLists(),
               );
             },
           ),

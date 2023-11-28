@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/adapters/ListExpandAdapter.dart';
 import 'package:flutter_ui/data/dummy.dart';
 import 'package:flutter_ui/model/people.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
-import '../../adapters/ListBasicAdapter.dart';
-
-class BasicLists extends StatefulWidget {
-  const BasicLists();
+class ExpandLists extends StatefulWidget {
+  const ExpandLists();
 
   @override
-  State<BasicLists> createState() => _BasicListsState();
+  State<ExpandLists> createState() => _ExpandListsState();
 }
 
-class _BasicListsState extends State<BasicLists> {
+class _ExpandListsState extends State<ExpandLists> {
   late BuildContext context;
   void onItemClick(int indext, People obj) {
     print("onItemClick $indext");
@@ -28,9 +27,9 @@ class _BasicListsState extends State<BasicLists> {
     items.shuffle();
 
     return Scaffold(
-      appBar: CommonAppBar.getPrimaryAppbar(context, "Basic Lists")
+      appBar: CommonAppBar.getPrimaryAppbar(context, "Expand Lists")
           as PreferredSizeWidget?,
-      body: ListBasicAdapter(items, onItemClick).getView(),
+      body: ListExpandAdapter(items).getView(),
     );
   }
 }

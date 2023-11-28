@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/data/my_strings.dart';
+import 'package:flutter_ui/widget/my_text.dart';
 
 import '../model/people.dart';
 
@@ -66,7 +68,34 @@ class _ItemTileState extends State<ItemTile> {
               width: 20,
             ),
             Expanded(
-              child: Column(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.object.name!,
+                    style: MyText.title(context)!.copyWith(
+                      fontWeight: FontWeight.normal,
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                  Container(
+                    height: 5,
+                  ),
+                  Text(
+                    MyStrings.middle_lorem_ipsum,
+                    style: MyText.body1(context)!.copyWith(
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  Container(
+                    height: 5,
+                  ),
+                  Divider(
+                    height: 1,
+                    color: Colors.grey[300],
+                  ),
+                ],
+              ),
             )
           ],
         ),
