@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/adapters/ListDragAdapter.dart';
+import 'package:flutter_ui/adapters/ListSwipeAdapter.dart';
 import 'package:flutter_ui/data/dummy.dart';
 import 'package:flutter_ui/model/people.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
@@ -32,7 +32,7 @@ class _SwipeListsState extends State<SwipeLists> {
     return Scaffold(
       appBar: CommonAppBar.getPrimaryAppbar(context, "Swipe Lists")
           as PreferredSizeWidget?,
-      body: ListDragAdapter(items, onReorder).getView(),
+      body: ListSwipeAdapter(items, onReorder).getView(),
     );
   }
 }
