@@ -5,43 +5,28 @@ import '../model/people.dart';
 
 class ListSwipeAdapter {
   List? items = <People>[];
-  List itemsTile = <ItemTile>[];
-  Function onReorder;
+  Function onSwipe;
 
-  ListSwipeAdapter(this.items, this.onReorder);
+  ListSwipeAdapter(this.items, this.onSwipe);
 
   Widget getView() {
-    return ReorderableListView(
-      onReorder: _onReorder,
-      scrollDirection: Axis.vertical,
-      children: List.generate(this.items!.length, (index) {
-        return ItemTile(
-          key: Key('$index'),
-          index: index,
-          object: this.items![index],
-        );
+    return Container(
+      child: ListView.builder(itemBuilder: (BuildContext context, int index) {
+        return ItemTile(index: index, object: items![index], onSwipe: onSwipe);
       }),
     );
-  }
-
-  void _onReorder(int oldIndex, int newIndex) {
-    if (newIndex > oldIndex) newIndex -= 1;
-
-    final People item = this.items!.removeAt(oldIndex);
-    this.items!.insert(newIndex, item);
-    this.onReorder();
   }
 }
 
 class ItemTile extends StatefulWidget {
   final int index;
   final People object;
-  final Key key;
+  final Function onSwipe;
 
   const ItemTile({
-    required this.key,
     required this.index,
     required this.object,
+    required this.onSwipe,
   });
 
   @override
