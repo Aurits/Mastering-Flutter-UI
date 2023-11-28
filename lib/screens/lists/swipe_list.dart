@@ -13,12 +13,12 @@ class SwipeLists extends StatefulWidget {
 
 class _SwipeListsState extends State<SwipeLists> {
   late BuildContext context;
-  List<People>? items;
+  List<People>? items = Dummy.getPeopleData();
 
   @override
   void initState() {
     super.initState();
-    items = Dummy.getPeopleData();
+    items?.addAll(Dummy.getPeopleData());
   }
 
   void onItemSwipe(int index, People obj) {
