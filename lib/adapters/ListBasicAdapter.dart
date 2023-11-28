@@ -49,7 +49,15 @@ class _ItemTileState extends State<ItemTile> {
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5),
-        child: Row(),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              width: 20,
+            )
+          ],
+        ),
       ),
     );
   }
