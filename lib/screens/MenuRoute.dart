@@ -15,6 +15,7 @@ import 'package:flutter_ui/screens/lists/basic_list.dart';
 import 'package:flutter_ui/screens/lists/drag_list.dart';
 import 'package:flutter_ui/screens/lists/expand_list.dart';
 import 'package:flutter_ui/screens/lists/section_list.dart';
+import 'package:flutter_ui/screens/lists/swipe_list.dart';
 import 'package:flutter_ui/screens/splash_screens/facebook.dart';
 import 'package:flutter_ui/screens/splash_screens/instagram.dart';
 import 'package:flutter_ui/screens/splash_screens/tiktok.dart';
@@ -78,6 +79,15 @@ class MenuRoute extends StatelessWidget {
             onTap: () {
               Get.to(
                 () => DragLists(),
+              );
+            },
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Swipe Lists"),
+            onTap: () {
+              Get.to(
+                () => SwipeLists(),
               );
             },
           ),
