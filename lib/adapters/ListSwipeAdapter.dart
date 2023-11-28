@@ -36,35 +36,54 @@ class ItemTile extends StatefulWidget {
 class _ItemTileState extends State<ItemTile> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        ListTile(
-          key: PageStorageKey<int>(widget.index),
-          leading: Container(
-            child: CircleAvatar(
-              backgroundImage: AssetImage(
-                widget.object.image,
-              ),
+    return Dismissible(
+      key: Key(widget.index.toString()),
+      onDismissed: (direction) {
+        widget.onSwipe(widget.index, widget.object);
+      },
+      background: Container(
+        color: MyColors.accent,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: Icon(
+              Icons.delete,
+              color: Colors.white,
             ),
-            width: 50,
-            height: 50,
-          ),
-          title: Text(
-            widget.object.name!,
-            style: TextStyle(
-              color: Colors.grey[880],
-            ),
-          ),
-          trailing: Icon(
-            Icons.drag_handle,
-            color: MyColors.grey_40,
           ),
         ),
-        Divider(
-          height: 0,
-        )
-      ],
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ListTile(
+            leading: Container(
+              child: CircleAvatar(
+                  backgroundImage: AssetImage(
+                widget.object.image,
+              )),
+            ),
+            title: Text(
+              widget.object.name!,
+              style: TextStyle(
+                color: Colors.grey[880],
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text(
+              widget.object.email!,
+              style: TextStyle(
+                color: Colors.grey[880],
+              ),
+            ),
+          ),
+          Divider(
+            height: 1,
+            color: Colors.grey[400],
+          ),
+        ],
+      ),
     );
   }
 }
