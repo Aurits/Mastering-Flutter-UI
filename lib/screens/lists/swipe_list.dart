@@ -21,8 +21,12 @@ class _SwipeListsState extends State<SwipeLists> {
     items = Dummy.getPeopleData();
   }
 
-  void onReorder() {
-    setState(() {});
+  void onItemSwipe(int index, People obj) {
+    setState(() {
+      items!.removeAt(index);
+    });
+    print("onItemSwipe $index");
+    print(obj.name);
   }
 
   @override
@@ -32,7 +36,7 @@ class _SwipeListsState extends State<SwipeLists> {
     return Scaffold(
       appBar: CommonAppBar.getPrimaryAppbar(context, "Swipe Lists")
           as PreferredSizeWidget?,
-      body: ListSwipeAdapter(items, onReorder).getView(),
+      body: ListSwipeAdapter(items, onItemSwipe).getView(),
     );
   }
 }
