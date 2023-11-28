@@ -78,10 +78,6 @@ class _ItemTileState extends State<ItemTile> {
               ),
             ),
           ),
-          Divider(
-            height: 1,
-            color: Colors.grey[400],
-          ),
         ],
       ),
     );
