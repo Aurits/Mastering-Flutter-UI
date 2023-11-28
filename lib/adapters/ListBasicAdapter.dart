@@ -33,13 +33,20 @@ class ItemsTile extends StatefulWidget {
       required this.object,
       required this.onClick});
 
-  @override
-  State<ItemsTile> createState() => _ItemsTileState();
-}
+  void onItemClick(People obj) {
+    onClick(index, obj);
+  }
 
-class _ItemsTileState extends State<ItemsTile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return InkWell(
+      onTap: () {
+        onItemClick(object);
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5),
+        child: Row(),
+      ),
+    );
   }
 }
