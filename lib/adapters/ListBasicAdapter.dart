@@ -43,6 +43,14 @@ class ItemTile extends StatefulWidget {
 class _ItemTileState extends State<ItemTile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return InkWell(
+      onTap: () {
+        widget.onClick(widget.index, widget.object);
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5),
+        child: Row(),
+      ),
+    );
   }
 }
