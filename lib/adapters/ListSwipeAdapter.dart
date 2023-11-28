@@ -4,16 +4,23 @@ import 'package:flutter_ui/data/my_colors.dart';
 import '../model/people.dart';
 
 class ListSwipeAdapter {
-  List? items = <People>[];
-  Function onSwipe;
+  List<People>? items;
+  Function(int, People) onSwipe;
 
   ListSwipeAdapter(this.items, this.onSwipe);
 
   Widget getView() {
     return Container(
-      child: ListView.builder(itemBuilder: (BuildContext context, int index) {
-        return ItemTile(index: index, object: items![index], onSwipe: onSwipe);
-      }),
+      child: ListView.builder(
+        itemCount: items!.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ItemTile(
+            index: index,
+            object: items![index],
+            onSwipe: onSwipe,
+          );
+        },
+      ),
     );
   }
 }
@@ -21,7 +28,7 @@ class ListSwipeAdapter {
 class ItemTile extends StatefulWidget {
   final int index;
   final People object;
-  final Function onSwipe;
+  final Function(int, People) onSwipe;
 
   const ItemTile({
     required this.index,
@@ -29,12 +36,8 @@ class ItemTile extends StatefulWidget {
     required this.onSwipe,
   });
 
-  void onItemSwipe() {
-    onSwipe(index, object);
-  }
-
   @override
-  State<ItemTile> createState() => _ItemTileState();
+  _ItemTileState createState() => _ItemTileState();
 }
 
 class _ItemTileState extends State<ItemTile> {
@@ -64,9 +67,10 @@ class _ItemTileState extends State<ItemTile> {
           ListTile(
             leading: Container(
               child: CircleAvatar(
-                  backgroundImage: AssetImage(
-                widget.object.image,
-              )),
+                backgroundImage: AssetImage(
+                  widget.object.image,
+                ),
+              ),
             ),
             title: Text(
               widget.object.name!,
