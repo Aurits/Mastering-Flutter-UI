@@ -44,7 +44,8 @@ class _ItemTileState extends State<ItemTile> {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      key: Key(widget.index.toString()),
+      direction: DismissDirection.horizontal,
+      key: Key(widget.index.toString() + "-" + widget.object.name!),
       onDismissed: (direction) {
         widget.onSwipe(widget.index, widget.object);
       },
