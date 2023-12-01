@@ -88,7 +88,7 @@ class _ItemTileState extends State<ItemTile> {
                     ),
                   ),
                   Container(
-                    height: 5,
+                    height: 1,
                   ),
                   Divider(
                     height: 1,
