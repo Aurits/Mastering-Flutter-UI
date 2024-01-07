@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/data/my_strings.dart';
 import 'package:flutter_ui/widget/my_text.dart';
-
 import '../model/people.dart';
 
 class ListExpandAdapter {
