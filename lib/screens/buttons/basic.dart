@@ -151,6 +151,39 @@ class _BasicButtonsState extends State<BasicButtons> {
                 ),
               ],
             ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(25, 25, 15, 15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.contacts,
+                          color: MyColors.primary,
+                          size: 24,
+                        ),
+                        Container(
+                          width: 25,
+                        ),
+                        Text(
+                          "Morning Pizza",
+                          style: Theme.of(context).textTheme.headline5,
+                        )
+                      ],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        width: 75,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
