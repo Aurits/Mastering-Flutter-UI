@@ -100,6 +100,20 @@ class _BasicButtonsState extends State<BasicButtons> {
                       ),
                     )),
               ],
+            ),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: null,
+                  child: Text("Disabled"),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.grey[300]),
+                    foregroundColor:
+                        MaterialStateProperty.all(Colors.grey[800]),
+                  ),
+                ),
+              ],
             )
           ],
         ),
