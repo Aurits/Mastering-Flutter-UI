@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/data/my_colors.dart';
 import 'package:flutter_ui/widget/toolbar.dart';
 
 class BasicButtons extends StatefulWidget {
@@ -73,6 +74,29 @@ class _BasicButtonsState extends State<BasicButtons> {
                       "Normal",
                       style: TextStyle(
                         color: Colors.grey[800],
+                      ),
+                    )),
+                Spacer(),
+                Spacer(),
+                TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.transparent),
+                    child: Text(
+                      "Normal",
+                      style: TextStyle(
+                        color: MyColors.primary,
+                      ),
+                    )),
+                Spacer(),
+                TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.transparent),
+                    child: Text(
+                      "Normal",
+                      style: TextStyle(
+                        color: MyColors.accent,
                       ),
                     )),
               ],
