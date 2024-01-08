@@ -19,15 +19,49 @@ class _BasicButtonsState extends State<BasicButtons> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Spacer(),
-            ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "NORMAL",
-                  style: TextStyle(
-                    color: Colors.grey[800],
+            Row(
+              children: [
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[300],
                   ),
-                ))
+                  child: Text(
+                    "NORMAL",
+                    style: TextStyle(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                ),
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[300],
+                  ),
+                  child: Text(
+                    "NORMAL",
+                    style: TextStyle(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                ),
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[300],
+                  ),
+                  child: Text(
+                    "NORMAL",
+                    style: TextStyle(
+                      color: Colors.grey[800],
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
