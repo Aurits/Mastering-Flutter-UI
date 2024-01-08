@@ -11,6 +11,7 @@ import 'package:flutter_ui/screens/bottom_sheets/apps_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/basic_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/filter_bottom_sheet.dart';
 import 'package:flutter_ui/screens/bottom_sheets/floating_bottom_sheet.dart';
+import 'package:flutter_ui/screens/buttons/basic.dart';
 import 'package:flutter_ui/screens/lists/basic_list.dart';
 import 'package:flutter_ui/screens/lists/drag_list.dart';
 import 'package:flutter_ui/screens/lists/expand_list.dart';
@@ -42,6 +43,19 @@ class MenuRoute extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          ListTile(
+            leading: Icon(Icons.radio),
+            title: Text("Buttons"),
+          ),
+          ListTile(
+            trailing: Icon(Icons.arrow_forward_ios_sharp),
+            title: Text("Basic Buttons"),
+            onTap: () {
+              Get.to(
+                () => BasicButtons(),
+              );
+            },
+          ),
           ListTile(
             leading: Icon(Icons.view_column),
             title: Text("Lists"),
