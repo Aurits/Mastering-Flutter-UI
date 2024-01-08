@@ -114,7 +114,43 @@ class _BasicButtonsState extends State<BasicButtons> {
                   ),
                 ),
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                IconButton(onPressed: () {}, icon: Icon(Icons.remove)),
+                IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
+              ],
+            ),
+            Divider(),
+            Row(
+              children: [
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.add),
+                  heroTag: "btn1",
+                  backgroundColor: Colors.blue,
+                  elevation: 3,
+                ),
+                Spacer(),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.add),
+                  heroTag: "btn2",
+                  backgroundColor: Colors.pink,
+                  elevation: 3,
+                ),
+                Spacer(),
+                FloatingActionButton(
+                  onPressed: () {},
+                  child: Icon(Icons.add),
+                  heroTag: "btn3",
+                  backgroundColor: Colors.green,
+                  elevation: 3,
+                ),
+              ],
+            ),
           ],
         ),
       ),
