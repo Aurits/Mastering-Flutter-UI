@@ -38,7 +38,7 @@ class _BasicButtonsState extends State<BasicButtons> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[300],
+                    backgroundColor: Colors.blue,
                   ),
                   child: Text(
                     "NORMAL",
@@ -51,7 +51,7 @@ class _BasicButtonsState extends State<BasicButtons> {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[300],
+                    backgroundColor: Colors.pink,
                   ),
                   child: Text(
                     "NORMAL",
@@ -60,6 +60,21 @@ class _BasicButtonsState extends State<BasicButtons> {
                     ),
                   ),
                 ),
+              ],
+            ),
+            Row(
+              children: [
+                Spacer(),
+                TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.transparent),
+                    child: Text(
+                      "Normal",
+                      style: TextStyle(
+                        color: Colors.grey[800],
+                      ),
+                    )),
               ],
             )
           ],
